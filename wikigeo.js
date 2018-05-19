@@ -88,6 +88,8 @@ $(document).ready(function () {
       var lng = responseG.results[0].geometry.location.lng;
       var radiusvalue = radius;
       
+ // calls wikipedia api to search for nearby places
+      
       var geoSearch = "https://en.wikipedia.org/w/api.php?origin=*&action=query&prop=coordinates&pageimages&pageterms&format=json&generator=geosearch&ggscoord=" + lat + "%7C" + lng + "&prop=info&inprop=url&ggsradius=" + radiusvalue + "&ggslimit=40";
       $.ajax({
         url: geoSearch,
